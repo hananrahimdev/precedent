@@ -1,0 +1,112 @@
+// Get the canvas element
+var canvas = document.getElementById('game-canvas');
+var ctx = canvas.getContext('2d');
+
+// Set the canvas dimensions
+canvas.width = 800;
+canvas.height = 600;
+
+// Define the game variables
+var player1 = {
+  x: 100,
+  y: 100,
+  speed: 5
+};
+var player2 = {
+  x: 700,
+  y: 100,
+  speed: 5
+};
+var level = 1;
+var score = 0;
+
+// Draw the game elements
+function draw() {
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#000';
+  ctx.fillRect(player1.x, player1.y, 50, 50);
+  ctx.fillRect(player2.x, player2.y, 50, 50);
+  ctx.font = '24px Arial';
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  ctx.fillText('Level: ' + level, 10, 10);
+  ctx.fillText('Score: ' + score, 10, 40);
+}
+// Update the game state
+function update() {
+  // Update player positions
+  player1.x += player1.speed;
+  player2.x += player2.speed;
+  
+  // Check for collisions
+  if (player1.x + 50 > player2.x && player1.x < player2.x + 50 && player1.y + 50 > player2.y && player1.y < player2.y + 50) {
+    // Collision detected, update score and level
+    score++;
+    level++;
+    player1.x = 100;
+    player2.x = 700;
+  }
+// Check for level completion
+  if (level > 10) {
+    // Game completed, display ending screen
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#000';
+    ctx.font = '48px Arial';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('Congratulations, you completed the game!', canvas.width / 2, canvas.height / 2);
+  }
+}
+
+// Handle user input
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'ArrowLeft') {
+    player1.speed = -5;
+  } else if (event.key === 'ArrowRight') {
+    player1.speed = 5;
+  } else if (event.key === 'a') {
+    player2.speed = -5;
+  } else if (event.key === 'd') {
+    player2.speed = 5;
+  }
+});
+
+// Main game loop
+setInterval(function() {
+  update();
+  draw();
+}, 16);
+
+
+// Define the level data
+var levels = [
+  {
+    obstacles: [
+      { x: 200, y: 200, width: 50, height: 50 },
+      { x: 400, y: 300, width: 50, height: 50 }
+    ]
+  },
+  {
+    obstacles: [
+      { x: 100, y: 100, width: 50, height: 50 },
+      { x: 300, y: 200, width: 50, height: 50 },
+      { x: 500, y: 300, width: 50, height: 50 }
+    ]
+  },
+  // ...
+];
+
+// Define the multiplayer functionality
+var multiplayer = {
+  // ...
+};
+
+/* Add styles for the game */
+body {
+  background-color: #f0f0f0;
+}
+
+#game-canvas {
+  border: 1px solid #000;
+}
+

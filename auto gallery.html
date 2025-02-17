@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<script>
+c=1;
+function photoGallery()
+{
+if (c==1){
+document.getElementById('photo-gallery').src="images/bbb.jpg";
+document.getElementById('check').innerHTML="Picture 1";
+}
+
+{
+if (c==2){
+document.getElementById('photo-gallery').src="images/eee.jpg";
+document.getElementById('check').innerHTML="Picture 2";
+}
+
+{
+if (c==3){
+document.getElementById('photo-gallery').src="images/hih.jpg";
+document.getElementById('check').innerHTML="Picture 3";
+}
+
+{
+if (c==4){
+document.getElementById('photo-gallery').src="images/mmm.jpg";
+document.getElementById('check').innerHTML="Picture 4";
+}
+
+c++;
+// if must add after increment variable
+if(c>=4)
+{
+c=1;
+}
+
+setTimeout("photoGallery()",3000)
+}
+</script>
+</head>
+
+
+<body onLoad="photogallery()">
+
+<table border="1" align="center">
+<tr>
+<td><img src="" id="photo-gallery" width="420" height="260" border="5"></td>
+</tr>
+
+<tr>
+<td><h1 align="center" id="check"></h1></td>
+</tr>
+</table>
+</body>
+</html>

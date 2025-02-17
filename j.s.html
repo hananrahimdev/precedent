@@ -1,0 +1,35 @@
+// game.js
+import Phaser from 'phaser';
+
+const config = {
+  type: Phaser.AUTO,
+  width: 800,
+  height: 600,
+  physics: {
+    default: 'arcade',
+    arcade: {
+      gravity: { y: 300 },
+      debug: false,
+    },
+},
+  scene: {
+    preload: preload,
+    create: create,
+    update: update,
+  },
+};
+
+const game = new Phaser.Game(config);
+
+function preload() {
+  this.load.image('car', 'assets/car.png');
+  this.load.image('track', 'assets/track.png');
+}
+function create() {
+  const car = this.add.sprite(100, 100, 'car');
+  const track = this.add.sprite(400, 300, 'track');
+}
+
+function update() {
+  // Update game logic here
+}
