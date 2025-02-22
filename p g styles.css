@@ -47,10 +47,12 @@ body {
 
 #prev {
     left: 10px;
+    width: 100px;
 }
 
 #next {
     right: 10px;
+     width: 100px;
 }
 
 .nav-button:hover {
