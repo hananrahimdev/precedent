@@ -1,60 +1,57 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-.slider {
-    position: relative;
-    width: 100%;
-    max-width: 990px; /* Maximum width for the slider */
-    margin: auto;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.slides {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
 }
 
-.slide {
-    min-width: 100%; /* Each slide takes full width */
-    box-sizing: border-box;
+.gallery-container {
+    position: relative;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 700px;
 }
 
-.slide img {
-    width: 100%; /* Full width of the slide */
-    border-radius: 10px;
+.image-wrapper {
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+#gallery-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.button-container {
+    margin-top: 15px;
 }
 
 .nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent blue */
-    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
     border: none;
-    padding: 15px;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
     cursor: pointer;
-    border-radius: 50%;
-    font-size: 2em;
-    transition: background-color 0.3s;
-    z-index: 10; /* Ensure buttons are above the image */
-}
-
-#prev {
-    left: 10px;
-    width: 100px;
-}
-
-#next {
-    right: 10px;
-     width: 100px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .nav-button:hover {
-    background-color: rgba(0, 123, 255, 1); /* Solid blue on hover */
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.image-counter {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
 }

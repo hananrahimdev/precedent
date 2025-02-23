@@ -1,26 +1,38 @@
+const images = [
+    'image1.jpg',
+    'image2.jpg',
+    'image3.jpg',
+    'image4.jpg',
+    'image5.jpg'
+];
+
 let currentIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.display = (i === index) ? 'block' : 'none';
-    });
+const galleryImage = document.getElementById('gallery-image');
+const prevButton = document.getElementById('prev-button');
+const nextButton = document.getElementById('next-button');
+const imageCounter = document.getElementById('image-counter');
+
+function updateImage() {
+    galleryImage.src = images[currentIndex];
+    imageCounter.textContent = `${currentIndex + 1} of ${images.length}`;
 }
 
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides; // Loop back to the first slide
-    showSlide(currentIndex);
-}
+nextButton.addEventListener('click', () => {
+    currentIndex++;
+    if (currentIndex >= images.length) {
+        currentIndex = 0; // Loop back to the first image
+    }
+    updateImage();
+});
 
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Loop back to the last slide
-    showSlide(currentIndex);
-}
+prevButton.addEventListener('click', () => {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1; // Loop to the last image
+    }
+    updateImage();
+});
 
-// Initial display
-showSlide(currentIndex);
-
-// Event listeners for manual navigation
-document.getElementById('next').addEventListener('click', nextSlide);
-document.getElementById('prev').addEventListener('click', prevSlide);
+// Initialize the gallery with the first image
+updateImage();
