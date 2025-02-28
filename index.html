@@ -1,96 +1,530 @@
-
 <!doctype>
-<html lang="en">
-<title>PRECEDENT SCHOOL</title>
-
+<html>
 <head>
- 
-
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter up Animation on Scroll | CodingNepal</title>
-    <link rel="stylesheet" href="counter.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-
-
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatic Image Slider</title>
-    <link rel="stylesheet" href="Mysliderstyles.css">
+    
 </head>
+<title>PRECEDENT SCHOOL </title>
+<style>
 
-<center>
-<body bgcolor="lightgrey"><img src="images/school logo.jpg" alt="School Logo" width="200" height="200" style="border-radius: 490px; box-shadow: 0 0 10px rgba(0, 0, 0, 0);">
+ul
+{
+list-style-type:none;
+margin:0px;
+padding:0px;
+background-color:orrange;
+}
+
+li
+{
+float:left;
+}
+
+a:link
+{
+display:block;
+width:188px;
+height:50px;
+font-size:20px;
+text-decoration:none;
+line-height:50px;
+text-align:center;
+color:white;
+margin-left:8px;
+border-radius:30px 10px 30px 10px;
+background-color:black;
+
+background: -webkit-liner-gradient(green,blue);
+
+background: -o-liner-gradient(green,blue);
+
+background: -moz-liner-gradient(green,blue);
+
+background: linear-gradient(190deg,skyblue,black);
 
 
-<marquee direction="left" scrollamount="5"><h1 align="center"><font color="blue" size="7" >PRECEDENT SCHOOL AND COLLEGE ATTOCK CITY</font></h1></marquee>
+}
 
-<marquee direction="left" scrollamount="5"><h1 align="center"><font color="green" size="5" align="center">(--------------------Under The Supervision And Leadership Of Habib Rahim Khan Advocate High Court.--------------------)</font></h1></marquee>
+a:hover
+{
+background-color:skyblue;
+font-weight:bold;
+color:white;
 
-<marquee direction="left" scrollamount="5"><h1 align="center"><font color="red" size="5" >(--------Affiliated with Federal Board Of Intermediate And Secondary Education Islamabad (Reg.Code 2661)-----------)  </font></h1></marquee>
+background: -webkit-liner-gradient(red,white);
+
+background: -o-liner-gradient(red,white);
+
+background: -moz-liner-gradient(red,white);
+
+background: linear-gradient(190deg,red,white);
+}
+
+a:visited
+{
+background-color:skyblue;
+font-weight:bold;
+color:white;
+
+background: -webkit-liner-gradient(red,white);
+
+background: -o-liner-gradient(red,white);
+
+background: -moz-liner-gradient(red,white);
+
+background: linear-gradient(190deg,red,white);
+}
 
 
-</body>
+ul
+{
+list-style-type:none;
+margin:0px;
+padding:0px;
+background-color:orrange;
+}
+
+li
+{
+float:left;
+}
+
+#Fb
+{
+display:block;
+width:981px;
+height:80px;
+font-size:20px;
+text-decoration:none;
+line-height:80px;
+text-align:center;
+color:red;
+margin-left:0px;
+border-radius:10px 10px 10px 10px;
+background-color:black;
+
+background: -webkit-liner-gradient(black,blue);
+
+background: -o-liner-gradient(black,blue);
+
+background: -moz-liner-gradient(black,blue);
+
+background: linear-gradient(190deg,black,blue);
+
+
+}
+
+#Fb:hover
+{
+background-color:skyblue;
+font-weight:bold;
+color:white;
+
+background: -webkit-liner-gradient(black,green);
+
+background: -o-liner-gradient(black,green);
+
+background: -moz-liner-gradient(black,green);
+
+background: linear-gradient(190deg,black,green);
+}
+
+Fb:visited
+{
+background-color:skyblue;
+font-weight:bold;
+color:black;
+
+background: -webkit-liner-gradient(red,white);
+
+background: -o-liner-gradient(red,white);
+
+background: -moz-liner-gradient(red,white);
+
+background: linear-gradient(190deg,red,white);
+}
+
+
+body
+{
+margin:0px;
+
+
+}
+#maindiv
+{
+width:990px;
+height:0px;
+border;1px solid black;
+background-color:skyblue;
+position:relative;
+margin-left:auto;
+margin-right:auto;
+}
+
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners for the slider */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for the slider */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%; /* Circular buttons */
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for buttons */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Change background on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+.counter-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+   margin-top:607px;
+  margin-left:0px;
+     
+}
+
+.counter {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.counter:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.number {
+    font-size: 3em;
+    color: #007BFF;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: color 0.5s;
+}
+
+.number:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+#School Name
+{
+width:990px;
+height:0px;
+border;1px solid black;
+background-color:skyblue;
+position:relative;
+margin-left:auto;
+margin-right:auto;
+margin-top:200px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 990px; /* Adjust as needed */
+    overflow: hidden;
+    margin: auto;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+#menu
+{
+width:989px;
+height:50px;
+border:1px solid black;
+background-color:orange;
+text-align:center;
+line-height:50px;
+position:absolute;
+margin-top:0px;
+
+<ul>
+<li><a href="#1">Fee Structure</a></li>
+<li><a href="#2">Registration</a></li>
+<li><a href="#3">Staff</a></li>
+<li><a href="#4">Transport</a></li>
+</ul>
+}
 
 
 
 
+#content
+{
+width:990px;
+height:0px;
+border:1px solid black;
+background-color:grey;
+position:absolute;
+margin-top:px;
+text-align:center;
+line-height:0px;
+}
+
+#map
+{
+width:990px;
+height:0px;
+border:1px solid black;
+background-color:grey;
+position:absolute;
+margin-top:px;
+text-align:center;
+line-height:0px;
+}
+
+#footer
+{
+width:990px;
+height:0px;
+border:1px solid black;
+background-color:red;
+position:absolute;
+margin-top:457px;
+text-align:center;
+line-height:200px;
+}
+
+#number counter
+{
+width:990px;
+height:0px;
+border:1px solid black;
+background-color:red;
+position:absolute;
+margin-top:1070px;
+text-align:center;
+line-height:200px;
+}
+
+#number counter
+{
+width:990px;
+height:0px;
+border:1px solid black;
+background-color:red;
+position:absolute;
+margin-top:1070px;
+text-align:center;
+line-height:200px;
+}
+
+#news
+{
+width:990px;
+height:0px;
+border:1px solid black;
+background-color:red;
+position:absolute;
+margin-top:4px;
+text-align:center;
+line-height:200px;
+}
+
+#leftside
+{
+width:990px;
+height:0px;
+border:;
+background-color:blue;
+
+background: -webkit-liner-gradient(green,blue);
+
+background: -o-liner-gradient(green,blue);
+
+background: -moz-liner-gradient(green,blue);
+
+background: linear-gradient(190deg,purple,white);
 
 
-<table width="990" height="400" align="center"
-cellspacing="0" cellpadding="0">
+position:absolute;
+margin-top:0px;
+
+text-align:center;
+line-height:0px;
+}
+
+
+{
+width:268px;
+height:500px;
+border:1px solid black;
+background-color:pink;
+
+background: -webkit-liner-gradient(green,blue);
+
+background: -o-liner-gradient(green,blue);
+
+background: -moz-liner-gradient(green,blue);
+
+background: linear-gradient(190deg,white,blue);
+
+
+position:absolute;
+margin-top:0px;
+margin-left:721px;
+text-align:center;
+line-height:0px;
+}
+
+#buttons
+{
+width:989px;
+height:50px;
+border:1px solid black;
+background-color:orange;
+text-align:center;
+line-height:50px;
+position:absolute;
+margin-top:1186px;
+
+<ul>
+<li><a href="#1">Fee Structure</a></li>
+<li><a href="#2">Registration</a></li>
+<li><a href="#3">Staff</a></li>
+<li><a href="#4">Transport</a></li>
+<li><a href="#4">Home</a></li>
+</ul>
+}
+
+#fab
+{
+width:989px;
+height:50px;
+border:1px solid black;
+background-color:orange;
+text-align:center;
+line-height:50px;
+position:absolute;
+margin-top:502px;
+
+<ul>
+<li><a href="#1">Fee Structure</a></li>
+<li><a href="#2">Registration</a></li>
+<li><a href="#3">Staff</a></li>
+<li><a href="#4">Transport</a></li>
+<li><a href="#4">Home</a></li>
+</ul>
+}
+
+
+</style>
+</head>
+<body>
+<table cellpadding="15px">
 <tr>
 <td>
-<img src="images/ggg.jpg" width="990px" height="400px">
+<body bgcolor="lightgrey"><img src="images/school logo.jpg" alt="School Logo" width="200" height="200" style="border-radius: 490px; box-shadow: 0 0 10px rgba(0, 0, 0, 0);">
 </td>
 </tr>
 </table>
 
-
- 
-
-<table border="1" width="990" height="30" align="center"cellspacing="7"
-cellpadding="7" bgcolor="skyblue">
+<table width="990px" height="400px">
 <tr>
-<td align="center" width="100" height="100" bgcolor="#aaff238"><a href="feestructure2.html"><font color="black" size="6"><b>Fee structure</b></a></td>
+<td><marquee direction="left" scrollamount="5"><h1 align="center"><font color="blue" size="7" >PRECEDENT SCHOOL AND COLLEGE ATTOCK CITY</font></h1></marquee>
 
+<marquee direction="left" scrollamount="5"><h1 align="center"><font color="green" size="5" align="center">(--------------------Under The Supervision And Leadership Of Habib Rahim Khan Advocate High Court.--------------------)</font></h1></marquee>
 
-<td align="center" width="100" height="100" bgcolor="#aaff238"><a href="contact2.html"><font color="black" size="6"><b>Contact</a></td>
+<marquee direction="left" scrollamount="5"><h1 align="center"><font color="red" size="5" >(--------Affiliated with Federal Board Of Intermediate And Secondary Education Islamabad (Reg.Code 2661)-----------)  </font></h1></marquee></td>
 </tr>
-</table> 
+</table>
+
+<div id="maindiv">
+
+<table width="990px" height="500px">
+<tr>
+<td><img src="images/ggg.jpg" width="990px" height="500px"></img></td>
+
+
+</tr>
+</table>
+
+
+
+
 <table border="1" width="990" height="50" align="center" bgcolor="#ghgh55">
 <tr>
 <td align="center" width="50"><b><font color="red" size="6">NEWS</b></td>
 <td align="center" ><b><marquee direction="left" scrollamount="5" onmouseover="stop()" onmouseout="start()" ><font color="red" size="6">The Anual Exams Are Starting From 17 Februry.Result will be Announced On 3rd March 2025.New Classes Will Be Started On 10th March.  FREE ADMISSION ALERT!
  Precedent School is offering FREE ADMISSION to students till 15 March for the upcoming academic year!</marquee></b></td>
 </tr>
-</table> 
-</html>
+</table>
 
+ 
 
-<table border="1" width="990" height="30" align="center"cellspacing="7"
-cellpadding="7" bgcolor="skyblue">
-<tr>
-<td bgcolor="#aaff238" width="100px" height="100" align="center"><font color="black"><a href="transport.html"><font color="black" size="6"><b>Transport</b></a></td>
-
-
-<td align="center" width="120px" height="100" bgcolor="#aaff238"><a href="gallery2.html"><font color="black" size="6"><b>Gellery</b></a></td>
-
-</tr>
-</table> 
+<div id="School Name">
 
 
 
+</div>
 
-</html>
-
-<table width="990" height="500" align="center"cellspacing="0"
+<table width="990" height="500" align=""cellspacing="0"
 cellpadding="0">
 <tr>
-<td align="center"> <div class="slider">
+<td align=""> <div class="slider">
         <div class="slides">
             <div class="slide active">
                 <img src="images/vvv.jpg" alt="Image 1" width="990px" height="500px">
@@ -117,43 +551,100 @@ cellpadding="0">
         </div>
     </div>
 
-    <script src="Mysliderscript.js"></script>
+    <script src="Mysliderscript.js"></script></td>
+</tr>
+</table>
 
+<div id="buttons">
+ <ul>
+<li><a href="Vission.html">VISSION</a></li>
+<li><a href="Mission.html">MISSION</a></li>
+<li><a href="Ability.html">ABILITY</a></li>
+<li><a href="Facility.html">REGISTRATION</a></li>
+<li><a href="index.html">UNIFORM</a></li>
+
+ </div>
+
+
+    
+       <div id="leftside">
+<table width="990" height="153" align="center" cellspacing="0"
+cellpadding="0">
+<tr>
+<td><a href="images/add2.jpg"><img src="images/add2.jpg" width="335" height="450" align="center"></a></td>
+
+
+
+<td><a href="images/mmm.jpg"><img src="images/mmm.jpg" width="335" height="450" align="center"></a></td>
+
+
+<td><a href="images/hhh.jpg"><img src="images/hhh.jpg" width="323" height="450" align="center"></a></td>
+
+</tr>
+</table>
+
+
+
+    </div>
+    
+
+    
+    <div id="menu">
+
+  <ul>
+<li><a href="Vission.html">VISSION</a></li>
+<li><a href="Mission.html">MISSION</a></li>
+<li><a href="Ability.html">ABILITY</a></li>
+<li><a href="Facility.html">REGISTRATION</a></li>
+<li><a href="index.html">UNIFORM</a></li>
+
+
+ </div>
+
+<div id="fab">
+
+<table border="1" width="990" height="100" align="center"cellspacing="1"
+cellpadding="1" bgcolor="white">
+<tr>
+<td align="center" bgcolor="#mmnn32"><a href="https://www.facebook.com/share/15rXAwd2bP/" target="_blank" id="Fb"><font color="white" size="5">Visit Our Facebook Page</font></a>
 
 
 </td>
-
 </tr>
-</table>
-<table width="990" height="400" align="center"cellspacing="0"
-cellpadding="0">
-<tr>
-<td><a href="images/add2.jpg"><img src="images/add2.jpg" width="330" height="400" align="center"></a></td>
+</table> 
+
+</div>
+
+<div id="number counter">
+
+<div class="counter-container">
+        <div class="counter">
+            <h2>Total Students</h2>
+            <div class="number" id="counter1">0</div>
+        </div>
+        <div class="counter">
+            <h2>Total Staff</h2>
+            <div class="number" id="counter2">0</div>
+        </div>
+        <div class="counter">
+            <h2>Years of Success</h2>
+            <div class="number" id="counter3">0</div>
+        </div>
+    </div>
+
+    <script src="a counter script.js"></script>
 
 
 
-<td><a href="images/mmm.jpg"><img src="images/mmm.jpg" width="330" height="400" align="center"></a></td>
 
 
-<td><a href="images/hhh.jpg"><img src="images/hhh.jpg" width="323" height="400" align="center"></a></td>
+</div>
+    
 
-</tr>
-</table>
-
-
+  <div id="map">
 
 
-
-
-
-
-
-
-
-
-</table>
-
-<table border="1" width="990px" height="400px" align="center"cellspacing="0"
+    <table border="1" width="990px" height="400px" align="center"cellspacing="0"
 cellpadding="0" bgcolor="#000033">
 <tr>
 <td align="center" width="495"><font color="White" size="4"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.1631359853395!2d72.35982547480033!3d33.75645003329257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df1826e886d3ab%3A0xe26c6b54890ecab7!2sPrecedent%20School%20and%20college%20Attock.!5e0!3m2!1sen!2s!4v1738158496584!5m2!1sen!2s" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td>
@@ -167,45 +658,17 @@ cellpadding="0" bgcolor="#000033">
 
 
 
+   </div>
 
 
-<table border="1" width="990" height="10" align="center"cellspacing="1"
-cellpadding="1" bgcolor="skyblue">
-<tr>
-
-<td align="center" width="100" height="100" bgcolor="lightgreen"><a href="Mission.html"><font color="black" Size="5"<font color="black"><b>MISSION</b></a></td>
-<td align="center" width="100" height="100" bgcolor="lightgreen"><a href="Vission.html"><font color="black" Size="5"><font color="black" Size="5"><b>VISSION</b></a></td>
-
-
-
-<td align="center" width="100"  bgcolor="lightgreen"><a href="Ability.html"><font color="black" Size="5"><font color="black" Size="5"><b>ABILITY</b></a></td>
-</tr>
-</table> 
+</body>
 </html>
-</table>  
-<tr>
-<table border="1" width="990" height="100" align="center"cellspacing="1"
-cellpadding="1" bgcolor="white">
-<tr>
-<td align="center" bgcolor="#mmnn32"><a href="https://www.facebook.com/share/15rXAwd2bP/" target="_blank"><font color="white" size="5">Visit Our Facebook Page</font></a>
-
-
-</td>
-</tr>
-</table> 
 
 
 
-<table border="1" width="990" height="100px" align="center" cellspacing="0"
-cellpadding="0" bgcolor="black">
-<tr>
+ 
 
-<td align="center" width="100" height="100px" bgcolor="lightgreen"><a href="Facility.html"><font color="black" Size="5"><font color="black" Size="5"><b>FACILITY</b></a></td>
-<td align="center" width="100" height="100px" bgcolor="lightgreen"><a href="Registration.html"><font color="black" Size="5"><font color="black" Size="5"><b>REGISTRATION</b></a></td>
-<td align="center" width="100" height="100px" bgcolor="lightgreen"><a href="Admission.html"><font color="black" Size="5"><font color="black" Size="5"><b>ADMISSION</b></a></td>
-</tr>
-</table> 
-
+<div id="footer"><font color="yellow" size="7">
 
 
 
@@ -214,12 +677,14 @@ cellpadding="0" bgcolor="black">
 <tr>
 <td align="center"><font color="yellow"><b>&reg Alright Reserved by &copy2024-2026</td>
 </tr>
-</table>
+</table> 
+
+
+</font></div>
 
 
 
 
-
-
-</center>
+</div>
+</body>
 </html>
