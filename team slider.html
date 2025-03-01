@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="team styles.css">
+    <title>Team Member Slider</title>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="ggg.jpg" alt="Team Member 1">
+                <h3>John Doe</h3>
+                <p>Principal</p>
+            </div>
+            <div class="slide">
+                <img src="aaa.jpg" alt="Team Member 2">
+                <h3>Jane Smith</h3>
+                <p>Math Teacher</p>
+            </div>
+            <div class="slide">
+                <img src="member3.jpg" alt="Team Member 3">
+                <h3>Emily Johnson</h3>
+                <p>Science Teacher</p>
+            </div>
+            <!-- Add more team members as needed -->
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <script src="team script.js"></script>
+</body>
+</html>

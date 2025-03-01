@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    margin-top:100px;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners for the slider */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for the slider */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%; /* Circular buttons */
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for buttons */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Change background on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
